@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rakotondrabe Miora Fanomezana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bca7f89311.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/about.css">
+</head>
+<body>
+    <header>
+        <div class="en-tete">
+            <a href="index.html" class="name">Fanomezana</a>
+            <i id="navDeclencheur" class="fa-solid fa-bars"></i>
+        </div>
+        <nav id="navigation">
+            <div>
+                <a href="about.html">About</a>
+                <a href="projet.html">Projet</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <div class="profil">
+                <img src="img/profil.png" alt="My_profil">
+                <p>RAKOTONDRABE<br> MIORA<br> FANOMEZANA</p>
+            </div>
+            <div class="text_about">
+                Je m’appelle Rakotondrabe Miora Fanomezana, j’ai 22 ans et je termine actuellement mon baccalauréat en informatique a l’UQAC. 
+                Ce que j'aime dans le développement web, c'est qu'il réunit trois de mes centres d'intérêt : la programmation, la résolution de problèmes et l'apprentissage continu. Pourquoi ? Parce que le développement web est un domaine en perpétuelle évolution, avec de nouvelles technologies, Framework et outils qui apparaissent régulièrement. 
+                En plus du développement d'applications web, je suis passionné par les mathématiques, la musique et l'intelligence artificielle. Pour moi, les mathématiques sont un langage universel qui permet de partager des idées et des connaissances pour résoudre des problèmes. Quant à l'intelligence artificielle, c'est un domaine en pleine expansion qui, ce que j'apprécie particulièrement, relie les mathématiques, l'informatique et les défis réels du monde.
+            </div>
+        </section>
+        <section class="skill">
+            <h3>Au fil de mes années à l'université et à travers mes recherches personnelles, j'ai su développer et perfectionner les compétences suivantes :</h3>
+
+            <p><strong>Langages de programmation :</strong><br>
+                <span class="item-competence">C#</span> : Utilisé principalement pour le développement d'API web robustes avec le framework .NET, offrant une architecture évolutive et maintenable.<br>
+                <span class="item-competence">JavaScript</span> : Employé dans le développement frontend, en particulier avec React, pour créer des interfaces utilisateur dynamiques et réactives.<br>
+                <span class="item-competence">Python</span> : Exploité dans le domaine de l'intelligence artificielle, notamment avec des bibliothèques telles que TensorFlow et scikit-learn pour le machine learning et la modélisation de données.<br>
+                <span class="item-competence">Java</span> : Utilisé pour le développement d'applications mobiles performantes sous Android Studio.<br>
+                <span class="item-competence">C++</span> : Langage polyvalent pour des applications haute performance, utilisé pour des projets nécessitant une gestion fine des ressources.
+            </p>
+            
+            <p><strong>Base de données :</strong> MySQL, Oracle SQL, SQL Server<br>
+                <span class="item-competence">Script SQL</span> : Capacité à écrire des scripts SQL complexes pour manipuler et interroger efficacement des bases de données relationnelles.<br>
+                <span class="item-competence">scripts PL/SQL</span> : Expérience dans la création de procédures stockées avancées avec Oracle, optimisant les performances des transactions.<br>
+                <span class="item-competence">ORM</span> : Compétence pour interagir avec des bases de données à l'aide d'ORM (comme Entity Framework), garantissant un accès aux données fluide et un code plus maintenable.
+            </p>            
+            <p><strong>Concept avancé:</strong><br>
+                <span class="item-competence">Sécurité</span>: Capable de développer des applications sécurisées en prenant compte les vulnérabilités et en mettant en oeuvre les meilleures pratiques de sécurité.<br>
+                <span class="item-competence">Authentification</span>: Expérience dans la mise en place d'authentification robuste pour les applications, notamment avec la gestion de JWT.<br>
+                <span class="item-competence">Publication</span>: Compétent dans l'utilisation de Docker pour conteneuriser des applications et les déployer dans le cloud. Expérience avec Kubernetes pour l'orchestration et le déploiement à grande échelle.
+            </p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Miora Fanomezana. Tous droits réservés.
+    </footer>
+</body>
+<script>
+    const button = document.getElementById('navDeclencheur');
+    const nav = document.getElementById('navigation');
+    
+    button.addEventListener('click', () => {
+        if (nav.classList.contains('openNav')) {
+            // Transition de fermeture (vers le bas)
+            nav.style.transform = 'translateY(10px)';
+            nav.style.opacity = '0';
+            setTimeout(() => {
+                nav.classList.remove('openNav');
+                nav.style.visibility = 'hidden';
+            }, 750);
+        } else {
+            // Transition d'ouverture (vers le haut)
+            nav.classList.add('openNav');
+            nav.style.visibility = 'visible';
+            nav.style.transform = 'translateY(0px)'; // Appliquer la translation à 0px pour l'ouverture
+            setTimeout(() => {
+                nav.style.opacity = '1';
+            }, 10);
+        }
+    });
+
+    window.addEventListener('resize', ()=>{
+        nav.removeAttribute('style');
+    });
+</script>
