@@ -7,6 +7,9 @@
 body {
     margin: 1.5rem 1rem 1rem 1rem;
     background-color: #02012d;
+    font-family: "Chakra Petch", serif;
+    font-weight: 400;
+    font-style: normal;
     color: #fbfbfc;
 }
 
@@ -76,7 +79,9 @@ section{
 
 section.titleJob{
     font-size: 2.0rem;
-    font-family: Chillax, sans-serif;
+    font-family: "Sriracha", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 section.selfIntroduce{
     font-size: 1.125rem;
